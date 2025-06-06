@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conheça a LockSmart</title>
+  <link rel="stylesheet" href="Sobre.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="Sobre.js" defer></script>
+   <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <img src="logo-removebg-preview.png" alt="Logo LockSmart" class="logo" />
+      <h1>Conheça a <span class="brand">LockSmart</span></h1>
+      <p class="slogan">Segurança e tecnologia para escolas mais inteligentes. 🚀</p>
+      <button onclick="voltar()" class="voltar-btn">⬅ Voltar</button>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+      <li><a href="index.html">Início</a></li>
+      <li><a href="#quem-somos">Quem Somos</a></li>
+      <li><a href="#produto">Produto</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#comprar">Comprar</a></li>
+      <li><a href="Contato.html" class="fale-mobile">Fale Conosco</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="quem-somos" class="quem-somos">
+      <h2>Quem somos</h2>
+      <div class="content">
+        <img src="logo-removebg-preview.png" alt="Logo da empresa" />
+        <p><strong>Somos a LockSmart onde tecnologia encontra segurança!</strong></p>
+        <p>
+          Nossa missão é transformar escolas e instituições em lugares mais modernos,
+          protegidos e práticos. Criamos soluções que resolvem problemas reais com
+          inovação de verdade!
+        </p>
+      </div>
+    </section>
+
+    <section id="produto" class="produto">
+      <h2>🔐 Nosso Produto</h2>
+      <div class="content">
+        <img src="armario inteligente.png" alt="Armário Inteligente" />
+        <div>
+          <p>
+            O <strong>Armário Inteligente LockSmart</strong> traz tecnologia, praticidade e
+            tranquilidade para escolas.
+          </p>
+          <ul>
+            <li>🔑 Acesso via RFID: sem chave, sem senha</li>
+            <li>📱 App para abrir e controlar</li>
+            <li>✨ Visual moderno e materiais resistentes</li>
+            <li>📊 Relatórios em tempo real para gestão</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+      <h2>💬 O que dizem nossos clientes</h2>
+      <div class="depoimentos-container">
+        <blockquote>
+          <p>“Melhoramos a organização e segurança da escola em poucos dias!”</p>
+          <cite>— Diretora Ana Paula</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Tecnologia prática e fácil de usar. Os alunos amaram!”</p>
+          <cite>— Prof. Carlos Henrique</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="cta-final" id="comprar">
+      <h2>Dê o próximo passo</h2>
+      <p>Leve mais segurança para sua instituição com a LockSmart.</p>
+      <button onclick="comprar()">Quero modernizar agora 🔐</button>
+    </section>
+  </main>
+
+  <footer
+    style="
+      background-color: #002b5b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    "
+  >
+    <p>&copy; 2025 LockSmart. Todos os direitos reservados.</p>
+    <div style="margin-top: 10px;">
+     <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-felix/" style="color:white; margin:0 10px;" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a
+        href="https://www.instagram.com/pedro.zz__/"
+        target="_blank"
+        style="color: white; margin: 0 10px;"
+        aria-label="Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://wa.me/5512997119060?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20tranca%20eletrônica%20RFID!"
+        target="_blank"
+        style="color: white; margin: 0 10px;"
+        aria-label="WhatsApp"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

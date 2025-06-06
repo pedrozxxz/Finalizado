@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento via Pix - LockSmart</title>
+    <link rel="stylesheet" href="pix.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pagamento via Pix</h2>
+    <p>Escaneie o QR Code abaixo ou copie a chave Pix para pagar:</p>
+
+    <img src="d_wed_.png" alt="QR Code Pix" class="qrcode" />
+
+    <input id="chavePix" class="chave-pix" value="chavepix@locksmart.com.br" readonly />
+
+    <button class="btn" onclick="copiarChave()">📋 Copiar chave</button>
+    <button class="btn" onclick="simularPagamento()">💳 Simular Pagamento</button>
+    <button class="btn btn-secundario" onclick="history.back()">⬅ Voltar</button>
+
+    <div class="mensagem-sucesso" id="msgSucesso">
+      ✅ Pagamento efetuado com sucesso! Redirecionando para a página inicial...
+    </div>
+  </div>
+
+  <script>
+    function copiarChave() {
+      const chave = document.getElementById("chavePix").value;
+      navigator.clipboard.writeText(chave).catch(() => {});
+    }
+
+    function simularPagamento() {
+      const msg = document.getElementById("msgSucesso");
+      msg.style.display = "block";
+
+      // Redireciona para a página inicial após 2,5 segundos
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - Locksmart</title>
+  <link rel="stylesheet" href="login2.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo-removebg-preview.png" alt="Logo Locksmart" />
+    <h1>Cadastre-se</h1>
+    <p>Crie sua conta para acessar nossos serviços.</p>
+    
+    <form onsubmit="mostrarAlerta(event)">
+      <input type="text" placeholder="Nome completo" required />
+      <input type="email" placeholder="E-mail" required />
+      <input type="text" placeholder="Nome de usuário" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <input type="password" id="confirmarSenha" placeholder="Confirme a senha" required />
+      <input type="submit" value="Cadastrar" />
+    </form>
+
+    <div class="link">
+      <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+    </div>
+  </div>
+
+  <script>
+    function mostrarAlerta(event) {
+      event.preventDefault(); // Impede o envio do formulário
+
+      const senha = document.getElementById('senha').value;
+      const confirmar = document.getElementById('confirmarSenha').value;
+
+      if (senha !== confirmar) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro',
+          text: 'As senhas não coincidem. Verifique e tente novamente.',
+          confirmButtonText: 'OK'
+        });
+        return;
+      }
+
+      // Se as senhas forem iguais, mostra alerta de sucesso
+      Swal.fire({
+        icon: 'success',
+        title: 'Cadastro realizado com sucesso!',
+        confirmButtonText: 'OK'
+      }).then(() => {
+        window.location.href = 'login.html';
+      });
+    }
+  </script>
+</body>
+</html>

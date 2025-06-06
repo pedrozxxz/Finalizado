@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LockSmart - Tranca Eletrônica RFID</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo-removebg-preview.png" alt="Logo LockSmart">
+      <h1>LockSmart</h1>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="menu">
+      <a href="Sobre.html">Sobre Nós</a>
+      <a href="Contato.html">Fale Conosco</a>
+      <a href="login2.html">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Seja bem-vindo à LockSmart!</h2>
+
+    <!-- Produto -->
+    <section id="produto" class="produto">
+      <div class="produto-conteudo">
+        <div class="produto-texto">
+          <h3>Tranca Eletrônica com RFID – Segurança e Inovação</h3>
+          <p class="preco">A partir de <strong>R$ 720,00</strong></p>
+          <p class="resumo">
+            Conheça a nossa Tranca Eletrônica com tecnologia RFID: ideal para armários, lockers e móveis inteligentes. O
+            armário ao lado é apenas um exemplo de aplicação.
+          </p>
+          <ul class="beneficios">
+            <li>🔐 Acesso via cartão RFID ou chave digital</li>
+            <li>⚙️ Fácil integração em diferentes superfícies</li>
+            <li>🛡️ Alta segurança e durabilidade</li>
+            <li>🔋 Alimentação por bateria de longa duração</li>
+          </ul>
+          <a href="pagamento.html" class="botao-compra">Adquirir Tranca RFID</a>
+        </div>
+        <div class="produto-img">
+          <img src="51m5B8yyaNL.jpg" alt="Exemplo de armário com tranca RFID">
+        </div>
+      </div>
+    </section>
+
+    <!-- Vídeo -->
+    <section class="video">
+      <h3 class="texto">Veja a Tranca RFID em ação</h3>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/0hJdSp8ibig?si=a_BOPlsr95btKXkJ" title="YouTube video player"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Carrossel -->
+    <section class="galeria">
+      <h3 class="texto">Aplicações da Tranca RFID</h3>
+      <div class="carrossel-container">
+        <button class="carrossel-btn left" onclick="scrollCarrossel(-1)">&#10094;</button>
+        <div class="carrossel" id="carrossel">
+          <div class="carrossel-item">
+            <img src="armario inteligente.png" alt="Tranca em armário escolar">
+            <p>Armário Escolar</p>
+          </div>
+          <div class="carrossel-item">
+            <img src="fotos-parques-1-1024x819.webp" alt="Tranca em locker de academia">
+            <p>Locker de Academia</p>
+          </div>
+          <div class="carrossel-item">
+            <img src="1xg.jpg" alt="Tranca em gaveteiro corporativo">
+            <p>Gaveteiro Corporativo</p>
+          </div>
+          <div class="carrossel-item">
+            <img src="luxury-hotel-closet-1500x1000.avif" alt="Aplicação em armário de hotel">
+            <p>Armário de Hotel</p>
+          </div>
+          <div class="carrossel-item">
+            <img src="652fe683090eb.webp" alt="Tranca em armário de escritório">
+            <p>Escritório Inteligente</p>
+          </div>
+          <div class="carrossel-item">
+            <img src="armario_de_cozinha_branco_pequeno_utensilios_domesticos_1570287609_9034_600x600.jpg"
+              alt="Tranca em armário doméstico">
+            <p>Uso Doméstico</p>
+          </div>
+        </div>
+        <button class="carrossel-btn right" onclick="scrollCarrossel(1)">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Formulário -->
+    <section class="formulario">
+      <h3>Solicite seu orçamento</h3>
+      <form>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Descreva sua necessidade" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer style="background-color:#002B5B; color:white; padding:20px; text-align:center;">
+    <p>&copy; 2025 LockSmart. Todos os direitos reservados.</p>
+    <div style="margin-top:10px;">
+      <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-felix/" style="color:white; margin:0 10px;"
+        target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/pedro.zz__/" style="color:white; margin:0 10px;" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5512997119060?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20tranca%20eletrônica%20RFID!"
+        style="color:white; margin:0 10px;" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

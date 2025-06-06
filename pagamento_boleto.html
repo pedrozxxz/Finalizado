@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento via Boleto - LockSmart</title>
+  <link rel="stylesheet" href="boleto.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h2>Pagamento via Boleto</h2>
+    <p>Use a linha digitável abaixo ou escaneie o código de barras:</p>
+
+    <img src="barcode.png" alt="Código de barras do boleto" class="codigo-barras" />
+
+    <input id="linhaBoleto" class="linha-digitavel" value="34191.79001 01043.510047 91020.150008 2 86070000072000" readonly />
+
+    <button class="btn" onclick="copiarLinha()">📋 Copiar linha digitável</button>
+    <button class="btn" onclick="simularPagamento()">💳 Simular Pagamento</button>
+    <button class="btn btn-secundario" onclick="history.back()">⬅ Voltar</button>
+
+    <div class="mensagem-sucesso" id="msgSucesso">
+      ✅ Pagamento efetuado com sucesso! Redirecionando para a página inicial...
+    </div>
+  </div>
+  
+
+  <script>
+    function copiarLinha() {
+      const linha = document.getElementById("linhaBoleto").value;
+      navigator.clipboard.writeText(linha).catch(() => {});
+    }
+
+    function simularPagamento() {
+      const msg = document.getElementById("msgSucesso");
+      msg.style.display = "block";
+
+      // Aguarda 2,5 segundos e redireciona
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2500);
+    }
+  </script>
+  
+
+</body>
+</html>
