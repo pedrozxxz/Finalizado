@@ -15,7 +15,7 @@ function comprar() {
       popup: 'swal-custom'
     }
   }).then(() => {
-    window.location.href = "pagamento.html";
+    window.location.href = "Pagamento.html";
   });
 }
 
