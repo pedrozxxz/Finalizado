@@ -20,14 +20,3 @@ function toggleMenu() {
   const menu = document.getElementById("menu");
   menu.classList.toggle("active");
 }
-
-function scrollCarrossel(direction) {
-  const carrossel = document.getElementById("carrossel");
-  const itemWidth = carrossel.querySelector(".carrossel-item").offsetWidth + 20; // largura + gap
-
-  if (direction === 'right') {
-    carrossel.scrollBy({ left: itemWidth * 3, behavior: 'smooth' });
-  } else {
-    carrossel.scrollTo({ left: 0, behavior: 'smooth' });
-  }
-}
