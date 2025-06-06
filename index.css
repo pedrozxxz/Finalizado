@@ -61,8 +61,6 @@ main h2 {
   margin-bottom: 40px;
   color: #002B5B;
 }
-
-/* Produto */
 .produto {
   background: linear-gradient(to right, #f4f9ff, #e8f1fa);
   padding: 40px;
@@ -139,8 +137,6 @@ main h2 {
 .produto-texto button:hover {
   background: #004080;
 }
-
-/* Vídeo */
 .video {
   margin: 50px auto;
   text-align: center;
@@ -164,8 +160,6 @@ main h2 {
   height: 100%;
   border: none;
 }
-
-/* Carrossel */
 .galeria {
   margin: 50px auto;
   text-align: center;
@@ -192,8 +186,7 @@ main h2 {
 }
 
 .carrossel-item {
-  flex: 0 0 auto;
-  width: 220px;
+  flex: 0 0 calc(33.333% - 20px); /* 3 por vez com gap */
   scroll-snap-align: center;
   background: #fff;
   border: 2px solid #002B5B;
@@ -205,16 +198,10 @@ main h2 {
 
 .carrossel-item img {
   width: 100%;
-  height: 150px; /* altura fixa */
-  object-fit: cover; /* garante que a imagem preencha o espaço sem distorcer */
+  height: 150px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 8px;
-}
-
-.carrossel-item p {
-  font-weight: bold;
-  color: #002B5B;
-  font-size: 14px;
 }
 
 .carrossel-btn {
@@ -243,8 +230,15 @@ main h2 {
 .carrossel-btn.right {
   right: 10px;
 }
+@media (max-width: 768px) {
+  .carrossel-item {
+    flex: 0 0 80%;
+  }
 
-/* Formulário */
+  .carrossel-btn {
+    display: none;
+  }
+}
 .formulario {
   margin: 50px auto;
   text-align: center;
@@ -288,8 +282,6 @@ main h2 {
 .formulario button:hover {
   background: #004080;
 }
-
-/* Responsivo */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
