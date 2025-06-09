@@ -20,16 +20,15 @@ function comprar() {
 }
 
 function toggleMenu() {
-  const navLinks = document.getElementById("nav-links");
-  navLinks.classList.toggle("active");
+  const nav = document.getElementById('menu');
+  nav.classList.toggle('active');
 }
 
-
 window.onload = () => {
-  const navLinks = document.querySelectorAll("#nav-links a");
+  const navLinks = document.querySelectorAll("#menu a");
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-      document.getElementById("nav-links").classList.remove("active");
+      document.getElementById("menu").classList.remove("active");
     });
   });
 };

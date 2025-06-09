@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +9,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="Sobre.js" defer></script>
-   <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="header-container">
@@ -23,17 +22,20 @@
     </div>
   </header>
 
-  <nav class="navbar">
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <ul id="nav-links">
-      <li><a href="index.html">Início</a></li>
-      <li><a href="#quem-somos">Quem Somos</a></li>
-      <li><a href="#produto">Produto</a></li>
-      <li><a href="#depoimentos">Depoimentos</a></li>
-      <li><a href="#comprar">Comprar</a></li>
-      <li><a href="Contato.html" class="fale-mobile">Fale Conosco</a></li>
-    </ul>
+  <div class="navbar">
+  <div class="menu-toggle hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav id="menu">
+    <a href="index.html">Início</a>
+    <a href="#quem-somos">Quem Somos</a>
+    <a href="#produto">Produto</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#comprar">Comprar</a>
+    <a href="Contato.html" class="fale-mobile">Fale Conosco</a>
   </nav>
+</div>
+
 
   <main>
     <section id="quem-somos" class="quem-somos">
@@ -89,31 +91,20 @@
     </section>
   </main>
 
-  <footer
-    style="
+  <footer style="
       background-color: #002b5b;
       color: white;
       padding: 20px;
       text-align: center;
-    "
-  >
+    ">
     <p>&copy; 2025 LockSmart. Todos os direitos reservados.</p>
     <div style="margin-top: 10px;">
-     <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-felix/" style="color:white; margin:0 10px;" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a
-        href="https://www.instagram.com/pedro.zz__/"
-        target="_blank"
-        style="color: white; margin: 0 10px;"
-        aria-label="Instagram"
-        ><i class="fab fa-instagram"></i
-      ></a>
-      <a
-        href="https://wa.me/5512997119060?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20tranca%20eletrônica%20RFID!"
-        target="_blank"
-        style="color: white; margin: 0 10px;"
-        aria-label="WhatsApp"
-        ><i class="fab fa-whatsapp"></i
-      ></a>
+      <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-felix/" style="color:white; margin:0 10px;"
+        target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.instagram.com/pedro.zz__/" target="_blank" style="color: white; margin: 0 10px;"
+        aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5512997119060?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20a%20tranca%20eletrônica%20RFID!"
+        target="_blank" style="color: white; margin: 0 10px;" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
 

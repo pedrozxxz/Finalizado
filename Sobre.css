@@ -64,11 +64,35 @@ header {
   z-index: 1000;
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: #00A6FF;
+}
+
 .hamburger {
   font-size: 1.8rem;
   color: white;
   display: none;
   cursor: pointer;
+  
 }
 
 .navbar ul {
@@ -240,7 +264,28 @@ footer {
   }
 
   .hamburger {
-    display: block;
+    display: flex;
+    justify-content: end;
+  }
+
+  #menu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #002B5B;
+  position: absolute;
+  top: 87%; /* Em vez de top: 80px */
+  left: 0;
+  padding: 10px 20px;
+}
+
+  #menu a {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  #menu.active {
+    display: flex;
   }
 }
 .swal-custom {
@@ -268,4 +313,7 @@ footer {
     font-size: 0.9rem !important;
     padding: 0.5rem 1.2rem !important;
   }
+}
+.navbar {
+  position: relative;
 }
