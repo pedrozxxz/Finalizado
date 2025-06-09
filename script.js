@@ -16,3 +16,7 @@ function toggleMenu() {
   const nav = document.getElementById('menu');
   nav.classList.toggle('active');
 }
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
