@@ -282,10 +282,13 @@ function buscarCep() {
         return;
       }
 
-      // Preenche os campos automaticamente
+      // Preenche os campos de endereço
       document.getElementById("rua").value = data.logradouro || "";
       document.getElementById("cidade").value = data.localidade || "";
       document.getElementById("estado").value = data.uf || "";
+
+      // 📦 CALCULA FRETE AUTOMATICAMENTE após preencher o estado
+      calcularFrete();
 
       Swal.fire({
         icon: "success",
@@ -294,7 +297,7 @@ function buscarCep() {
         showConfirmButton: false,
       });
 
-      // Coloca o cursor no campo de número
+      // Foca automaticamente no campo número
       document.getElementById("numero").focus();
     })
     .catch(() => {
